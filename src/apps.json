@@ -1,0 +1,150 @@
+{
+    "tinkoff": {
+        "name" : "Тинькофф",
+        "applications" :[
+             {
+                "name": "Тинькофф - лучший банк России",
+                "icon": "https://lh3.ggpht.com/3F5mBvgv0ux28x3-d6tYMIrdtvVBlwGKqEIKmXnPuXFaVYJGNc6B1aS3_sKyevY3eeLz=s360-rw",
+                "platform": "apple",
+                "price": "free",
+                "rating": "4,5",
+                "location": "RU",
+                "asoindex": "7,8",
+                "installations": "123500",
+                "categoryPosition": "18"
+            },
+            {
+                "name": "Тинькофф - лучший банк России",
+                "icon": "https://lh3.ggpht.com/3F5mBvgv0ux28x3-d6tYMIrdtvVBlwGKqEIKmXnPuXFaVYJGNc6B1aS3_sKyevY3eeLz=s360-rw",
+                "platform": "android",
+                "price": "5$",
+                "rating": "4,2",
+                "location": "RU",
+                "asoindex": "5,2",
+                "installations": "54040",
+                "categoryPosition": "187"
+            },
+            {
+                "name": "Рокетбанк - лучше, чем Тинькофф. Поверьте.",
+                "icon": "https://lh3.googleusercontent.com/Ni3hLiREQVSluwPjdiM5uP_T2g9ZZcBwbm86GMDp7ppbwlZxE1T1qegGEn5NFHbBPwA=s180-rw",
+                "platform": "apple",
+                "price": "20$",
+                "rating": "3,5",
+                "location": "EN",
+                "asoindex": "7,3",
+                "installations": "1850006",
+                "categoryPosition": "10"
+            },
+            {
+                "name": "Встречайте Сбербанк Онлайн для Android - самое безопасное банковское приложение в мире, в котором доступны платежи и переводы без шаблонов.",
+                "icon": "https://lh3.googleusercontent.com/haJ9EbfgwDfF4My4sWz1faq68xksxgJ87AD1JybqPOP2O1bz-5TM8e-F7Ll2IHjwVPI=s180-rw",
+                "platform": "android",
+                "price": "free",
+                "rating": "2,5",
+                "location": "RU",
+                "asoindex": "5,4",
+                "installations": "908",
+                "categoryPosition": "326"
+            },
+            {
+                "name": "Мобильное приложение «Альфа－Банка» — безопасный доступ к вашим счетам и картам.",
+                "icon": "https://lh3.googleusercontent.com/zxWE_cAZikUWIEUG4ISM7FOsB0dB4xpQJryQXyxLz7cJ7XFkp0sSWxH5r52nNOwkXtU=s180-rw",
+                "platform": "android",
+                "price": "10¥",
+                "rating": "3,3",
+                "location": "JP",
+                "asoindex": "6,7",
+                "installations": "12657832",
+                "categoryPosition": "91"
+            },
+            {
+                "name": "ВТБ 24 Merchant Mobile Dev",
+                "icon": "https://lh3.googleusercontent.com/ZxBxB2J2EQY4znM8LbsK_ype9t7lvJMHLiZjIQDuV4x_gpAtUDIHVBzW1hdihpafh3o=s180-rw",
+                "platform": "iphone",
+                "price": "free",
+                "rating": "1,5",
+                "location": "FR",
+                "asoindex": "2,1",
+                "installations": "8",
+                "categoryPosition": "1488"
+            }]
+    },
+    "games": {
+        "name": "Игры", 
+        "applications": [
+         {
+                "name": "Lines! Color Lines! Те самые из Windows 1998! 5 в ряд!",
+                "icon": "https://lh3.googleusercontent.com/eSVvsCUvKZJRxVQVFY8vfLtV57hKMTivHHMqHd5q5ngNn7Y87mOw9PT1P5DPIjM4K0o=s180-rw",
+                "platform": "iphone",
+                "price": "123$",
+                "rating": "4,5",
+                "location": "RU",
+                "asoindex": "7,2",
+                "installations": "19998",
+                "categoryPosition": "6"
+            },
+            {
+                "name": "Сокровища Монтесумы 3. Match-3 Игра.",
+                "icon": "https://lh3.ggpht.com/JyfCYdxEJE4XxzsVjyXyZmxp1qZZjmXW3YnB-FJo1uPMKze2xRL0BnN8o9qqSnBQUg=s180-rw",
+                "platform": "android",
+                "price": "free",
+                "rating": "3,2",
+                "location": "FR",
+                "asoindex": "2,1",
+                "installations": "128",
+                "categoryPosition": "90"
+            },
+            {
+                "name": "Tower of Hero. Fill dungeons with over 100 heroes! An exhilarating game where you can fill dungeons with vast armies of heroes and attack the enemy monsters.",
+                "icon": "https://lh3.googleusercontent.com/jzpsub7-_6SN-G6u0Sj-U81hMrEtl1AtMRMwOavhp7TUGwheuMAPYLPZuC-9ISaM1NY=s180-rw",
+                "platform": "iphone",
+                "price": "4$",
+                "rating": "2,5",
+                "location": "US",
+                "asoindex": "7,9",
+                "installations": "12438",
+                "categoryPosition": "64"
+            },
+            {
+                "name": "Sudoku",
+                "icon": "https://lh3.googleusercontent.com/1H6DKZQz6tHzJcmZija5KYiAWLqwoOgbYUkEhxcnXyRSC7_Zv3xlvAGMowhhx3LBmmNW=s180-rw",
+                "platform": "android",
+                "price": "20$",
+                "rating": "1,0",
+                "location": "PL",
+                "asoindex": "9,2",
+                "installations": "8632138",
+                "categoryPosition": "940"
+            },
+            {
+                "name": "Clash of Clans",
+                "icon": "https://lh3.googleusercontent.com/akv2Bdp7i5Vv-sl9FuP3_dhWpUO80zULf-Pkh6RFleomEp6pZorHuCNm3FbR9oAMunVK=s180-rw",
+                "platform": "android",
+                "price": "free",
+                "rating": "4,7",
+                "location": "FR",
+                "asoindex": "2,1",
+                "installations": "8",
+                "categoryPosition": "1"
+            }]
+    },
+    "new": {
+        "name": "Новая папка",
+        "applications": []
+    },
+    "kek": {
+        "name": "Memes",
+        "applications": [ {
+                "name": "Meme Generator Free",
+                "icon": "https://lh3.googleusercontent.com/XRxgUi6_y_v-KAm5vxh8h7UQw8Yx6dHnvQyMZjOoAG0TGWVpdSqE6lk977P-_K4exC8=s180-rw",
+                "platform": "android",
+                "price": "free",
+                "rating": "5",
+                "location": "Ru",
+                "asoindex": "10",
+                "installations": "9999999",
+                "categoryPosition": "0"
+            }
+        ]
+    }
+}

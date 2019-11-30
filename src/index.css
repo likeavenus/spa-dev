@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "MuseoSans-Reg";
+  src: url("./fonts/MuseoSansCyrl-500.woff") format('woff');
+}
+
+@font-face {
+  font-family: "MuseoSans-Bold";
+  src: url("./fonts/MuseoSansCyrl-900.woff") format('woff');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
