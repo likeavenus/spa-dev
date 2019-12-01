@@ -4,12 +4,23 @@ import Apple from '../SvgItems/AppleSvg';
 import Android from '../SvgItems/AndroidSvg';
 
 export default class Filter extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            space: 'tinkoff'
+        }
+    }
+
+    selectFunction = (space) => {
+    };
     render() {
+
         return (
             <div className={styles.block}>
                 <div className={styles.select_menu}>
-                    <button type={'button'} className={styles.select_stage}>Игры</button>
-                    <button type={'button'} className={styles.select_stage}>Тинькофф</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction('games')}} className={styles.select_stage}>Игры</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction('tinkoff')}} className={styles.select_stage}>Тинькофф</button>
                 </div>
                 <div className={styles.block_box}>
                     <div className={styles.block_filters}>

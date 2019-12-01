@@ -2,11 +2,15 @@
 
 .block {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto 25px;
   padding: 12px 13px 12px 12px;
   box-sizing: border-box;
   background: #fff;
   border-radius: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $tablet) {
     width: 420px;

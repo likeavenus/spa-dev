@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './Card.scss';
 import Apple from "../SvgItems/AppleSvg";
+import Android from "../SvgItems/AndroidSvg";
 import {star} from '../SvgItems/StarSvg';
 import {mark} from '../SvgItems/MarkSvg';
 
@@ -12,29 +13,35 @@ export default class Card extends Component {
             <div className={styles.block}>
                 <div className={styles.block_top}>
                     <div className={styles.block_avatar}>
-                        <img src={'https://lh3.ggpht.com/3F5mBvgv0ux28x3-d6tYMIrdtvVBlwGKqEIKmXnPuXFaVYJGNc6B1aS3_sKyevY3eeLz=s360-rw'} alt=""/>
+                        <img src={this.props.appAvatar} alt=""/>
                     </div>
                     <div className={styles.block_top_info}>
-                        <div className={styles.app_name}>Тинькофф – Онлайн банк. Банк № 1 в России</div>
+                        <div className={styles.app_name}>{this.props.appName}</div>
                         <div className={styles.app_info}>
                             <div className={styles.app_platform}>
-                               <Apple
-                                styles={styles.platform_img_apple}
-                               />
-                                <p className={styles.app_price}>free</p>
+                                {this.props.appPlatform === 'apple' && <Apple styles={styles.platform_img_apple}/>}
+                                {this.props.appPlatform === 'android' && <Android styles={styles.platform_img_apple}/>}
+                                <p className={styles.app_price}>{this.props.price}</p>
                             </div>
                             <div className={styles.app_rating}>
                                 {star}
-                                <p className={styles.app_rating_num}>4,8</p>
+                                <p className={styles.app_rating_num}>{this.props.rating}</p>
                             </div>
                             <div className={styles.app_language}>
                                 {mark}
-                                <p className={styles.app_lang_text}>RU</p>
+                                <p className={styles.app_lang_text}>{this.props.location}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <CardBottomInfo/>
+                <CardBottomInfo
+                    aso={this.props.aso}
+                    asoStats={this.props.asoStats}
+                    installs={this.props.installs}
+                    installsStats={this.props.installsStats}
+                    category={this.props.category}
+                    categoryStats={this.props.categoryStats}
+                />
             </div>
         )
     }
