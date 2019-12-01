@@ -1,4 +1,4 @@
-import styles from "./Card.scss";
+import styles from "../Card/Card.scss";
 import React from "react";
 
 export const mark = <svg className={styles.app_lang_img} width="8.98" height="12.397" viewBox="0 0 8.98 12.397">

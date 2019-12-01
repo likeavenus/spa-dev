@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import styles from './Card.scss';
-import {apple} from "./AppleSvg";
-import {star} from './StarSvg';
-import {mark} from './MarkSvg';
+import Apple from "../SvgItems/AppleSvg";
+import {star} from '../SvgItems/StarSvg';
+import {mark} from '../SvgItems/MarkSvg';
 
 import CardBottomInfo from "../CardBottomInfo/CardBottomInfo";
 
@@ -17,19 +17,16 @@ export default class Card extends Component {
                     <div className={styles.block_top_info}>
                         <div className={styles.app_name}>Тинькофф – Онлайн банк. Банк № 1 в России</div>
                         <div className={styles.app_info}>
-
-                            <div className={styles.app_platform_info}>
-                                <div className={styles.app_platform}>
-                                   {apple}
-                                    <p className={styles.app_price}>free</p>
-                                </div>
+                            <div className={styles.app_platform}>
+                               <Apple
+                                styles={styles.platform_img_apple}
+                               />
+                                <p className={styles.app_price}>free</p>
                             </div>
-
                             <div className={styles.app_rating}>
                                 {star}
                                 <p className={styles.app_rating_num}>4,8</p>
                             </div>
-
                             <div className={styles.app_language}>
                                 {mark}
                                 <p className={styles.app_lang_text}>RU</p>

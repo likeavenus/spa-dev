@@ -1,4 +1,4 @@
-import styles from "./Card.scss";
+import styles from "../Card/Card.scss";
 import React from "react";
 
 export const star = <svg className={styles.app_rating_img} version="1.1" id="Capa_1"  x="0px" y="0px" viewBox="0 0 47.94 47.94">

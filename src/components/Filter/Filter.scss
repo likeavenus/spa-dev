@@ -1,0 +1,155 @@
+@import "../../variables";
+
+.block {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.block_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.select_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.select_stage {
+  font-family: $fontReg;
+  letter-spacing: 0.13px;
+  color: #979898;
+  background: #E8E8E8;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+  padding: 8px 20px;
+
+  &.active {
+    color: #1D353D;
+    background: #fff;
+  }
+}
+
+.block_filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 14px 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 15px;
+}
+
+.rating_box {
+  width: 100%;
+}
+
+.select_rating {
+  color: #979898;
+  border-radius: 10px;
+  padding: 5px 20px 5px 10px;
+  background: #F1F1F5;
+  height: 31px;
+  font-family: $fontReg;
+  width: 100%;
+  text-align: left;
+}
+
+.filters_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filters_title {
+  font-family: $fontReg;
+  font-weight: normal;
+  color: #1D353D;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.filter_item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+
+  &:not(:last-child):after {
+    content: '';
+    width: 1px;
+    height: 18px;
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #E8E8E8;
+  }
+
+  @media (min-width: $tablet) {
+    &:not(:last-child):after {
+      content: '';
+      width: 1px;
+      height: 18px;
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #E8E8E8;
+    }
+  }
+
+}
+
+.filter_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontReg;
+  font-size: 15px;
+  left: 0.13px;
+  color: #979898;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #F1F1F5;
+  box-sizing: border-box;
+  height: 31px;
+
+  @media (min-width: $tablet) {
+    padding: 8px 15px;
+  }
+
+
+  &.active {
+    color: #fff;
+    background: #3469F2;
+
+    & svg {
+      fill: #fff;
+    }
+  }
+}
+
+.android_img {
+  fill: #979898;
+}
+
+.apple_img {
+  fill: #979898;
+}
