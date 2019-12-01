@@ -1,0 +1,146 @@
+@import '../../variables';
+
+.block {
+  width: 280px;
+  margin: 0 auto;
+  padding: 12px 13px 12px 12px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    width: 420px;
+  }
+}
+
+.block_top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+    margin-bottom: 27px;
+  }
+}
+
+.block_avatar {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  margin-right: 10px;
+
+  @media (min-width: $tablet) {
+    width: 81px;
+    height: 81px;
+    margin-right: 16px;
+  }
+}
+
+.block_top_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.app_name {
+  font-size: 14px;
+  font-family: $fontReg;
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 100%;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    max-width: 223px;
+    margin-bottom: 11px;
+  }
+}
+
+.app_platform {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.platform_img_apple {
+  margin-right: 6px;
+  fill: #979898;
+  width: 14px;
+
+  @media (min-width: $tablet) {
+    width: 12px;
+  }
+}
+
+.app_price {
+  padding: 2px 3px 2.5px;
+  font-family: $fontReg;
+  font-size: 13px;
+  color: #979898;
+  border: 1px solid #979898;
+  border-radius: 6px;
+
+  @media (min-width: $tablet) {
+    padding: 4px 6px 5px;
+  }
+}
+
+.app_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 273px;
+  }
+}
+
+.app_rating_img {
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+  fill: #F8BF25;
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.app_rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_rating_num {
+  font-family: $fontReg;
+  font-size: 15px;
+  letter-spacing: 0.13px;
+}
+
+.app_language {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_lang_img {
+  margin-right: 5px;
+  fill: #979898;
+}
+
+.app_lang_text {
+  font-family: $fontReg;
+  letter-spacing: 0.13px;
+  font-size: 15px;
+}

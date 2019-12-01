@@ -1,7 +1,49 @@
 @import "variables";
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #000;
+  }
+}
 .App {
   text-align: center;
   font-family: $fontReg;
   background: #F1F1F5;
   min-height: 100vh;
 }
+
