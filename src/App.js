@@ -9,16 +9,33 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-            data: null
+            data: null,
+            games: false,
+            tinkoff: true,
+            filter: 'all'
         }
     }
 
     componentDidMount() {
-        console.log(DATA);
+        this.setState({
+            data: DATA
+        }, ()=> {
+            const {games, tinkoff, data} = this.state;
+            if (games) {
+                console.log(data.games)
+            } else if (tinkoff) {
+                console.log(data.tinkoff)
+            }
+        })
+
+
     }
 
 
     render() {
+        const {data, games, tinkoff, filter} = this.state;
+
+        console.log(data);
         return (
             <div className={styles.App}>
                 <Filter/>

@@ -2,7 +2,11 @@
 
 .block {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto 23px;
+
+  @media (min-width: $tablet) {
+    width: 420px;
+  }
 }
 
 .block_box {
@@ -10,7 +14,7 @@
   flex-direction: column;
   align-items: flex-start;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .select_menu {
@@ -66,6 +70,35 @@
   font-family: $fontReg;
   width: 100%;
   text-align: left;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:after {
+    content: '';
+    width: 12px;
+    height: 6px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    background: url("./img/arrow-down-1.svg") no-repeat center / contain;
+  }
+
+  &.active {
+    &:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: 170px;
+
+    &:after {
+      right: 10px;
+    }
+  }
 }
 
 .filters_list {
@@ -101,6 +134,8 @@
   }
 
   @media (min-width: $tablet) {
+    margin-right: 20px;
+
     &:not(:last-child):after {
       content: '';
       width: 1px;
@@ -133,6 +168,7 @@
 
   @media (min-width: $tablet) {
     padding: 8px 15px;
+    height: 36px;
   }
 
 
