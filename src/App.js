@@ -4,6 +4,19 @@ import DATA from './apps';
 import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
 
+import {createStore} from "redux";
+
+function appList(state = DATA, action) {
+    console.log(state, action);
+    return state;
+}
+
+const store = createStore(appList);
+
+store.subscribe(()=> {
+   console.log('subscribe', store.getState())
+});
+
 export default class App extends Component {
     constructor(props) {
         super(props);
