@@ -3,19 +3,28 @@ import styles from "./App.scss";
 import DATA from './apps';
 import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
+import {SHOW_ALL} from "./actions/actions";
 
 import {createStore} from "redux";
 
-function appList(state = DATA, action) {
-    console.log(state, action);
+function appList(state = [DATA], action) {
+    if (action.type === "SHOW_ALL") {
+        return [
+            ...state,
+            action.payload
+        ]
+    }
+
     return state;
 }
 
 const store = createStore(appList);
 
 store.subscribe(()=> {
-   console.log('subscribe', store.getState())
+    console.log('subscribe', store.getState());
 });
+
+store.dispatch({type: "SHOW_ALL", payload: "Show all cards"});
 
 export default class App extends Component {
     constructor(props) {
@@ -55,7 +64,6 @@ export default class App extends Component {
                 item.key = id;
                 id += 1;
             }
-            console.log(currentData.applications);
             cardsArr = currentData.applications.map((item)=> {
                 return <Card
                     key={item.key}
