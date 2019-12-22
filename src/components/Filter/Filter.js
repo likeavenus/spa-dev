@@ -10,6 +10,7 @@ class Filter extends Component {
     }
 
     selectFunction = (space) => {
+        console.log(this.props.store);
         this.props.onSelectFilter(space);
     };
 

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import styles from "./App.scss";
 import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
-import {SHOW_ALL} from "./actions/actions";
 import {connect} from 'react-redux';
 
 class App extends Component {
@@ -11,6 +10,7 @@ class App extends Component {
     }
 
     componentDidMount() {
+
     }
 
     render() {
@@ -51,10 +51,5 @@ class App extends Component {
 export default connect(
     state => ({
         store: state
-    }),
-    dispatch => ({
-        renderCards: () => {
-            console.log(this.props.store)
-        }
     })
 )(App);
