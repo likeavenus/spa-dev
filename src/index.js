@@ -10,7 +10,6 @@ import {createStore} from "redux";
 const initialState = data;
 
 function appList(state = initialState, action) {
-    console.log(state);
     switch (action.type) {
         case "GAMES": return state.games;
         case "TINKOFF": return state.tinkoff;
@@ -23,9 +22,6 @@ const store = createStore(appList, window.__REDUX_DEVTOOLS_EXTENSION__ && window
 store.subscribe(()=> {
     console.log('subscribe', store.getState());
 });
-
-
-
 
 ReactDOM.render(
     <Provider store={store}>

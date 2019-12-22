@@ -5,15 +5,10 @@ import Filter from "./components/Filter/Filter";
 import {connect} from 'react-redux';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-
-    }
 
     render() {
+
+        console.log(this.props);
 
         let cardsArr;
         let id = 0;

@@ -2,9 +2,6 @@ import styles from "./CardBottomInfo.scss";
 import React, {Component} from "react";
 
 export default class CardBottomInfo extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
 
         return (

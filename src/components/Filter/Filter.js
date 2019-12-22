@@ -5,14 +5,11 @@ import Android from '../SvgItems/AndroidSvg';
 import {connect} from 'react-redux';
 
 class Filter extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     selectFunction = (space) => {
-        console.log(this.props.store);
         this.props.onSelectFilter(space);
     };
+
 
     render() {
 
