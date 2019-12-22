@@ -4,25 +4,35 @@ import './index.css';
 import App from './App';
 import DATA from './apps';
 import * as serviceWorker from './serviceWorker';
-import {Provider, connect} from 'react-redux';
+import {Provider} from 'react-redux';
 import {createStore} from "redux";
 
-function appList(state = [DATA], action) {
-    if (action.type === "SHOW_ALL") {
-        return [
-            ...state,
-            action.payload
-        ]
-    }
+const initialState = DATA;
 
-    return state;
+function appList(state = initialState, action) {
+    if (action.type === "TINKOFF") {
+        return state.tinkoff;
+    } else if (action.type === "GAMES") {
+        return state.games;
+    } else {
+        return state.tinkoff;
+    }
+    // console.log(state.games.applications);
+
+    // switch (action.type) {
+    //     case "GAMES": return state.games.applications;
+    //     case "TINKOFF": return state.tinkoff.applications;
+    //     default: return state.games.applications;
+    // }
 }
 
-const store = createStore(appList);
+const store = createStore(appList, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 store.subscribe(()=> {
     console.log('subscribe', store.getState());
 });
+
+
 
 
 ReactDOM.render(

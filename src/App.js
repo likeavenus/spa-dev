@@ -14,43 +14,14 @@ class App extends Component {
     }
 
     render() {
-        // const {data, games, tinkoff, filter, currentData} = this.state;
-        // let cardsArr;
-        // if (currentData !== null) {
-        //     let id = 0;
-        //     for (let item of currentData.applications) {
-        //         item.key = id;
-        //         id += 1;
-        //     }
-        //     cardsArr = currentData.applications.map((item)=> {
-        //         return <Card
-        //             key={item.key}
-        //             appAvatar={item.icon}
-        //             appName={item.name}
-        //             appPlatform={item.platform}
-        //             price={item.price}
-        //             rating={item.rating}
-        //             location={item.location}
-        //             aso={'ASO index'}
-        //             asoStats={item.asoindex}
-        //             installs={'Установок в месяц'}
-        //             installsStats={item.installations}
-        //             category={'В категории'}
-        //             categoryStats={item.categoryPosition}
-        //         />
-        //     });
-        // }
-
-        console.log(this.props.store)
-        const {tinkoff} = this.props.store[0];
 
         let cardsArr;
         let id = 0;
-        for (let item of tinkoff.applications) {
+        for (let item of this.props.store.applications) {
             item.key = id;
             id += 1;
         }
-        cardsArr = tinkoff.applications.map((item)=> {
+        cardsArr = this.props.store.applications.map((item)=> {
             return <Card
                 key={item.key}
                 appAvatar={item.icon}
@@ -70,9 +41,7 @@ class App extends Component {
 
         return (
             <div className={styles.App}>
-                <Filter
-
-                />
+                <Filter/>
                 {cardsArr}
             </div>
         );
@@ -83,5 +52,9 @@ export default connect(
     state => ({
         store: state
     }),
-    dispatch => ({})
+    dispatch => ({
+        renderCards: () => {
+            console.log(this.props.store)
+        }
+    })
 )(App);

@@ -2,25 +2,24 @@ import React, {Component} from 'react';
 import styles from './Filter.scss';
 import Apple from '../SvgItems/AppleSvg';
 import Android from '../SvgItems/AndroidSvg';
+import {connect} from 'react-redux';
 
-export default class Filter extends Component {
+class Filter extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            space: 'tinkoff'
-        }
     }
 
     selectFunction = (space) => {
+        this.props.onSelectFilter(space);
     };
+
     render() {
 
         return (
             <div className={styles.block}>
                 <div className={styles.select_menu}>
-                    <button type={'button'} onClick={()=> {this.selectFunction('games')}} className={styles.select_stage}>Игры</button>
-                    <button type={'button'} onClick={()=> {this.selectFunction('tinkoff')}} className={styles.select_stage}>Тинькофф</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction('GAMES')}} className={styles.select_stage}>Игры</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction('TINKOFF')}} className={styles.select_stage}>Тинькофф</button>
                 </div>
                 <div className={styles.block_box}>
                     <div className={styles.block_filters}>
@@ -61,3 +60,15 @@ export default class Filter extends Component {
         )
     }
 }
+
+export default connect(
+    state => ({
+        store: state
+    }),
+    dispatch => ({
+        onSelectFilter: (filterName) => {
+            dispatch({type: filterName})
+        }
+    })
+
+)(Filter);
