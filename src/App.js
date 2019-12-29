@@ -1,12 +1,16 @@
-import React, {Component} from 'react';
+ import React, {Component} from 'react';
 import styles from "./App.scss";
 import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
 import {connect} from 'react-redux';
 
-class App extends Component {
+import {ALL_PLATFORMS} from "./actions/actions";
+import {IOS_PLATFORM} from "./actions/actions";
+import {ANDROID_PLATFORM} from "./actions/actions";
 
-    render() {
+ class App extends Component {
+
+     render() {
 
         let currentFilter = this.props.store.filter.toLowerCase();
         let cardsArr;
@@ -14,6 +18,11 @@ class App extends Component {
         for (let item of this.props.store.list[currentFilter].applications) {
             item.key = id;
             id += 1;
+        }
+
+        switch (this.props.store.platform) {
+            case ALL_PLATFORMS:
+
         }
         cardsArr = this.props.store.list[currentFilter].applications.map((item)=> {
             return <Card

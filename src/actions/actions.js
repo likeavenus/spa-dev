@@ -1,1 +1,6 @@
 export const CHANGE_TAB = 'CHANGE_TAB';
+
+export const CHANGE_PLATFORM = 'CHANGE_PLATFORM';
+export const ALL_PLATFORMS = 'ALL_PLATFORMS';
+export const IOS_PLATFORM = 'IOS_PLATFORM';
+export const ANDROID_PLATFORM = 'ANDROID_PLATFORM';
