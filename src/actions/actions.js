@@ -1,4 +1,1 @@
-export const SHOW_ALL = {
-    type: "SHOW_ALL",
-    payload: 'All cards'
-};
+export const CHANGE_TAB = 'CHANGE_TAB';

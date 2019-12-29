@@ -6,39 +6,44 @@ import data from './apps';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
+import {CHANGE_TAB} from './actions/actions';
 
 const initialState = {
     list: data,
     filter: 'TINKOFF'
 };
 
-function visibilityFilter(state = 'TINKOFF', action) {
+function appList(state = initialState, action) {
     switch (action.type) {
-        case 'CHANGE_TAB':
-            return action.filter;
+        case CHANGE_TAB:
+            return {...state, filter: action.filter}
         default: return state;
     }
 }
 
-function appList(state = initialState, action) {
-    // switch (action.type) {
-    //     case 'CHANGE_TAB':
-    //         return action.space;
-    //     default: return {...state};
-    // }
-    switch (action.type) {
-        case 'CHANGE_TAB':
-            return visibilityFilter({...state}, action.filter);
-        default: return {...state};
-    }
-}
+// function visibilityFilter(state = TINKOFF, action) {
+//     switch (action.type) {
+//         case SET_VISIBILITY_FILTER:
+//             return action.filter;
+//         default: return state;
+//     }
+// }
+//
+// function appList(state = initialState, action) {
+//     switch (action.type) {
+//         case CHANGE_TAB:
+//             return visibilityFilter(state, action.filter);
+//         default: return state;
+//     }
+// }
 
 const store = createStore(appList, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-console.log(store.getState())
+
 store.subscribe(()=> {
-    console.log(store.getState());
+    console.log('getState', store.getState());
 });
+
 
 ReactDOM.render(
     <Provider store={store}>

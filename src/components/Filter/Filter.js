@@ -3,6 +3,8 @@ import styles from './Filter.scss';
 import Apple from '../SvgItems/AppleSvg';
 import Android from '../SvgItems/AndroidSvg';
 import {connect} from 'react-redux';
+import {CHANGE_TAB} from '../../actions/actions';
+
 
 class Filter extends Component {
 
@@ -16,8 +18,8 @@ class Filter extends Component {
         return (
             <div className={styles.block}>
                 <div className={styles.select_menu}>
-                    <button type={'button'} onClick={()=> {this.selectFunction('CHANGE_TAB','GAMES')}} className={styles.select_stage}>Игры</button>
-                    <button type={'button'} onClick={()=> {this.selectFunction('CHANGE_TAB', 'TINKOFF')}} className={styles.select_stage}>Тинькофф</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction(CHANGE_TAB,'GAMES')}} className={styles.select_stage}>Игры</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction(CHANGE_TAB, 'TINKOFF')}} className={styles.select_stage}>Тинькофф</button>
                 </div>
                 <div className={styles.block_box}>
                     <div className={styles.block_filters}>
