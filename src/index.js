@@ -7,20 +7,37 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
 
-const initialState = data;
+const initialState = {
+    list: data,
+    filter: 'TINKOFF'
+};
+
+function visibilityFilter(state = 'TINKOFF', action) {
+    switch (action.type) {
+        case 'CHANGE_TAB':
+            return action.filter;
+        default: return state;
+    }
+}
 
 function appList(state = initialState, action) {
+    // switch (action.type) {
+    //     case 'CHANGE_TAB':
+    //         return action.space;
+    //     default: return {...state};
+    // }
     switch (action.type) {
-        case "GAMES": return state.games;
-        case "TINKOFF": return state.tinkoff;
-        default: return state.tinkoff;
+        case 'CHANGE_TAB':
+            return visibilityFilter({...state}, action.filter);
+        default: return {...state};
     }
 }
 
 const store = createStore(appList, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+console.log(store.getState())
 store.subscribe(()=> {
-    console.log('subscribe', store.getState());
+    console.log(store.getState());
 });
 
 ReactDOM.render(

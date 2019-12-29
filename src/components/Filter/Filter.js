@@ -6,8 +6,8 @@ import {connect} from 'react-redux';
 
 class Filter extends Component {
 
-    selectFunction = (space) => {
-        this.props.onSelectFilter(space);
+    selectFunction = (action, filter) => {
+        this.props.onSelectFilter(action, filter);
     };
 
 
@@ -16,8 +16,8 @@ class Filter extends Component {
         return (
             <div className={styles.block}>
                 <div className={styles.select_menu}>
-                    <button type={'button'} onClick={()=> {this.selectFunction('GAMES')}} className={styles.select_stage}>Игры</button>
-                    <button type={'button'} onClick={()=> {this.selectFunction('TINKOFF')}} className={styles.select_stage}>Тинькофф</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction('CHANGE_TAB','GAMES')}} className={styles.select_stage}>Игры</button>
+                    <button type={'button'} onClick={()=> {this.selectFunction('CHANGE_TAB', 'TINKOFF')}} className={styles.select_stage}>Тинькофф</button>
                 </div>
                 <div className={styles.block_box}>
                     <div className={styles.block_filters}>
@@ -64,8 +64,8 @@ export default connect(
         store: state
     }),
     dispatch => ({
-        onSelectFilter: (filterName) => {
-            dispatch({type: filterName})
+        onSelectFilter: (action, filter) => {
+            dispatch({type: action, filter: filter})
         }
     })
 
