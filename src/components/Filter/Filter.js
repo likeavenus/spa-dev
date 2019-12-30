@@ -3,7 +3,6 @@ import styles from './Filter.scss';
 import Apple from '../SvgItems/AppleSvg';
 import Android from '../SvgItems/AndroidSvg';
 import {connect} from 'react-redux';
-
 import {
     CHANGE_TAB,
     CHANGE_PLATFORM,
