@@ -20,10 +20,6 @@ import {ANDROID_PLATFORM} from "./actions/actions";
             id += 1;
         }
 
-        switch (this.props.store.platform) {
-            case ALL_PLATFORMS:
-
-        }
         cardsArr = this.props.store.list[currentFilter].applications.map((item)=> {
             return <Card
                 key={item.key}

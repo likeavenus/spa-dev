@@ -34,7 +34,6 @@ class Filter extends Component {
     };
 
     selectPlatform = (action, platform) => {
-        console.log(action, platform);
         this.props.onSelectPlatform(action, platform);
     };
 

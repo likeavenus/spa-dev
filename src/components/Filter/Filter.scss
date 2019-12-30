@@ -178,6 +178,20 @@
   background: #F1F1F5;
   box-sizing: border-box;
   height: 31px;
+  transition: all .3s ease;
+
+  &:hover {
+    background: #1f1e1e;
+    color: #fff;
+
+    & .android_img {
+      fill: #fff;
+    }
+    & .apple_img {
+      fill: #fff;
+    }
+
+  }
 
   @media (min-width: $tablet) {
     padding: 8px 15px;
@@ -197,8 +211,10 @@
 
 .android_img {
   fill: #979898;
+  transition: all .3s ease;
 }
 
 .apple_img {
   fill: #979898;
+  transition: all .3s ease;
 }
