@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styles from './Filter.scss';
 import Apple from '../SvgItems/AppleSvg';
 import Android from '../SvgItems/AndroidSvg';
+import Star from '../SvgItems/StarSvg';
 import {connect} from 'react-redux';
 import {
     CHANGE_TAB,
@@ -16,6 +17,7 @@ class Filter extends Component {
         super(props);
 
         this.state = {
+            ratingSelector: false,
             activeTab: this.props.store.activeTab,
             activeFilter: {
                 tinkoff: {
@@ -77,10 +79,16 @@ class Filter extends Component {
 
     };
 
+    handleToggleRating = () => {
+        this.setState({
+            ratingSelector: !this.state.ratingSelector
+        })
+    };
+
 
     render() {
 
-        const {activeTab, activeFilter} = this.state;
+        const {activeTab, activeFilter, ratingSelector} = this.state;
         let tinkoffTab = styles.select_stage;
         let gamesTab = styles.select_stage;
 
@@ -112,7 +120,11 @@ class Filter extends Component {
             }
         }
 
-        console.log('activeFilter', activeFilter);
+        let ratingBoxStyle = styles.rating_box;
+
+        if (ratingSelector) {
+            ratingBoxStyle += ` ${styles.active}`;
+        }
 
 
         return (
@@ -146,10 +158,14 @@ class Filter extends Component {
                                 </li>
                             </ul>
 
-                            <div className={styles.rating_box}>
-                                <button className={styles.select_rating} type={'button'}>Выбрать</button>
+                            <div className={ratingBoxStyle}>
+                                <button onClick={()=> {this.handleToggleRating()}} className={styles.select_rating} type={'button'}>Выбрать</button>
                                 <div className={styles.rating_list}>
-
+                                    <div className={styles.rating_btns}>
+                                        <button className={styles.rating_list_btn}>от 4,0 <Star styles={styles.rating_star}/> </button>
+                                        <button className={styles.rating_list_btn}>от 3,0 <Star styles={styles.rating_star}/> </button>
+                                        <button className={styles.rating_list_btn}>от 2,0 <Star styles={styles.rating_star}/> </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

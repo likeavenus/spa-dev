@@ -7,6 +7,10 @@
   @media (min-width: $tablet) {
     width: 420px;
   }
+
+  @media (min-width: $laptop) {
+    width: 856px;
+  }
 }
 
 .block_box {
@@ -72,6 +76,33 @@
 
 .rating_box {
   width: 100%;
+  position: relative;
+
+  &.active {
+    border-radius: 10px;
+    background: #F1F1F5;
+
+    & .rating_btns {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    & .rating_list {
+      left: 0;
+      top: 25px;
+      width: 100%;
+      background: #F1F1F5;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      overflow: hidden;
+    }
+  }
+
+  @media (min-width: $laptop) {
+    width: auto;
+  }
 }
 
 .select_rating {
@@ -111,6 +142,12 @@
     &:after {
       right: 10px;
     }
+  }
+
+  @media (min-width: $laptop) {
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 19px;
   }
 }
 
@@ -217,4 +254,37 @@
 .apple_img {
   fill: #979898;
   transition: all .3s ease;
+}
+
+.rating_list {
+  position: absolute;
+}
+
+.rating_btns {
+  display: none;
+  width: 100%;
+}
+
+.rating_star {
+  width: 15px;
+  height: 15px;
+  fill: #F8BF25;
+}
+
+.rating_list_btn {
+  font-family: $fontReg;
+  color: #979898;
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 28px;
+  padding: 0 19px;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &:hover {
+    background: #3469F2;
+    color: #fff;
+  }
 }

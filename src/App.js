@@ -91,7 +91,10 @@ import {ANDROID_PLATFORM} from "./actions/actions";
          return (
             <div className={styles.App}>
                 <Filter/>
-                {filterCard()}
+                <div className={styles.cards_box}>
+                    {filterCard()}
+                </div>
+
             </div>
         );
     }
