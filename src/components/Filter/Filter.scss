@@ -218,7 +218,7 @@
   transition: all .3s ease;
 
   &:hover {
-    background: #1f1e1e;
+    background: rgba(31, 30, 30, 0.51);
     color: #fff;
 
     & .android_img {
@@ -227,14 +227,12 @@
     & .apple_img {
       fill: #fff;
     }
-
   }
 
   @media (min-width: $tablet) {
     padding: 8px 15px;
     height: 36px;
   }
-
 
   &.active {
     color: #fff;
