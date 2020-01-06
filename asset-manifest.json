@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/spa-dev/static/css/main.dee7ea91.chunk.css",
+    "main.css": "/spa-dev/static/css/main.94dec59c.chunk.css",
     "main.js": "/spa-dev/static/js/main.18f0e9bb.chunk.js",
     "main.js.map": "/spa-dev/static/js/main.18f0e9bb.chunk.js.map",
     "runtime-main.js": "/spa-dev/static/js/runtime-main.eef25bd7.js",
@@ -8,16 +8,16 @@
     "static/js/2.a57c5a29.chunk.js": "/spa-dev/static/js/2.a57c5a29.chunk.js",
     "static/js/2.a57c5a29.chunk.js.map": "/spa-dev/static/js/2.a57c5a29.chunk.js.map",
     "index.html": "/spa-dev/index.html",
-    "precache-manifest.d4252be22761ed08097a48d6398697a2.js": "/spa-dev/precache-manifest.d4252be22761ed08097a48d6398697a2.js",
+    "precache-manifest.ca4dfda54de317b224b1a7aad311af5b.js": "/spa-dev/precache-manifest.ca4dfda54de317b224b1a7aad311af5b.js",
     "service-worker.js": "/spa-dev/service-worker.js",
-    "static/css/main.dee7ea91.chunk.css.map": "/spa-dev/static/css/main.dee7ea91.chunk.css.map",
+    "static/css/main.94dec59c.chunk.css.map": "/spa-dev/static/css/main.94dec59c.chunk.css.map",
     "static/media/index.css": "/spa-dev/static/media/MuseoSansCyrl-900.5736894b.woff",
     "static/media/Filter.scss": "/spa-dev/static/media/arrow-down-1.8b8b9a1a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.eef25bd7.js",
     "static/js/2.a57c5a29.chunk.js",
-    "static/css/main.dee7ea91.chunk.css",
+    "static/css/main.94dec59c.chunk.css",
     "static/js/main.18f0e9bb.chunk.js"
   ]
 }
