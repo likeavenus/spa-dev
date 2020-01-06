@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styles from './Card.scss';
 import Apple from "../SvgItems/AppleSvg";
 import Android from "../SvgItems/AndroidSvg";
-import {star} from '../SvgItems/StarSvg';
+import Star from '../SvgItems/StarSvg';
 import {mark} from '../SvgItems/MarkSvg';
 
 import CardBottomInfo from "../CardBottomInfo/CardBottomInfo";
@@ -20,11 +20,14 @@ export default class Card extends Component {
                         <div className={styles.app_info}>
                             <div className={styles.app_platform}>
                                 {this.props.appPlatform === 'apple' && <Apple styles={styles.platform_img_apple}/>}
+                                {this.props.appPlatform === 'iphone' && <Apple styles={styles.platform_img_apple}/>}
                                 {this.props.appPlatform === 'android' && <Android styles={styles.platform_img_apple}/>}
                                 <p className={styles.app_price}>{this.props.price}</p>
                             </div>
                             <div className={styles.app_rating}>
-                                {star}
+                                <Star
+                                    styles={styles.app_rating_img}
+                                />
                                 <p className={styles.app_rating_num}>{this.props.rating}</p>
                             </div>
                             <div className={styles.app_language}>

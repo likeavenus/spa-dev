@@ -48,3 +48,14 @@ a {
   padding-top: 50px;
 }
 
+.cards_box {
+  @media (min-width: $laptop) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 856px;
+    margin: 0 auto;
+  }
+}

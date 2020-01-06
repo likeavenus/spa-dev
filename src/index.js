@@ -12,16 +12,29 @@ import {
     ALL_PLATFORMS,
     } from './actions/actions';
 
+// const initialState = {
+//     list: data,
+//     filter: 'TINKOFF',
+//     platform: ALL_PLATFORMS
+// };
+
 const initialState = {
     list: data,
-    filter: 'TINKOFF',
-    platform: ALL_PLATFORMS
+    activeTab: 'TINKOFF',
+    filter: {
+        'TINKOFF': {
+            platform: ALL_PLATFORMS
+        },
+        'GAMES': {
+            platform: ALL_PLATFORMS
+        }
+    },
 };
 
 function appList(state = initialState, action) {
     switch (action.type) {
         case CHANGE_TAB:
-            return {...state, filter: action.filter};
+            return {...state, activeTab: action.activeTab};
         case CHANGE_PLATFORM:
             return visibilityFilter(state, action);
         default: return state;
@@ -29,7 +42,15 @@ function appList(state = initialState, action) {
 }
 
 function visibilityFilter(state = ALL_PLATFORMS, action) {
-    return {...state, platform: action.platform};
+    return {...state, filter: {
+            'TINKOFF': {
+                platform: action['TINKOFF']
+            },
+            'GAMES': {
+                platform: action['GAMES']
+            },
+        }
+    };
 }
 
 const store = createStore(appList, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -46,5 +67,4 @@ ReactDOM.render(
         <App />
     </Provider>,
     document.getElementById('root'));
-
 serviceWorker.unregister();
