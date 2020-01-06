@@ -15,6 +15,11 @@
   @media (min-width: $tablet) {
     width: 420px;
   }
+
+  @media (min-width: $laptop) {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .block_top {
