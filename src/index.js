@@ -12,12 +12,6 @@ import {
     ALL_PLATFORMS,
     } from './actions/actions';
 
-// const initialState = {
-//     list: data,
-//     filter: 'TINKOFF',
-//     platform: ALL_PLATFORMS
-// };
-
 const initialState = {
     list: data,
     activeTab: 'TINKOFF',
@@ -30,6 +24,30 @@ const initialState = {
         }
     },
 };
+
+initialState.list.tinkoff.applications.map(item => {
+    if (item.name.length > 40) {
+        item.name = item.name.slice(0, 40) + '...';
+    }
+
+    if (parseInt(item.installations) > 1000 && parseInt(item.installations) < 1000000) {
+        item.installations = '1k';
+    } else if (parseInt(item.installations) > 1000000) {
+        item.installations = '1kk';
+    }
+});
+
+initialState.list.games.applications.map(item => {
+    if (item.name.length > 40) {
+        item.name = item.name.slice(0, 40) + '...';
+    }
+
+    if (parseInt(item.installations) > 1000 && parseInt(item.installations) < 1000000) {
+        item.installations = '1k';
+    } else if (parseInt(item.installations) > 1000000) {
+        item.installations = '1kk';
+    }
+});
 
 function appList(state = initialState, action) {
     switch (action.type) {

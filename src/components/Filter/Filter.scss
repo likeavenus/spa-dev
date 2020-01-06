@@ -238,7 +238,7 @@
 
   &.active {
     color: #fff;
-    background: #3469F2;
+    background: rgb(31, 30, 30);
 
     & svg {
       fill: #fff;
@@ -266,12 +266,18 @@
 }
 
 .rating_star {
-  width: 15px;
-  height: 15px;
   fill: #F8BF25;
+  width: 10px;
+  height: 10px;
+
+  @media (min-width: $tablet) {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .rating_list_btn {
+  display: inline;
   font-family: $fontReg;
   color: #979898;
   width: 100%;

@@ -23,25 +23,25 @@ import {ANDROID_PLATFORM} from "./actions/actions";
         }
 
 
-         cardsArr = list[currentFilter].applications.map((item)=> {
-            return <Card
-                key={item.key}
-                appAvatar={item.icon}
-                appName={item.name}
-                appPlatform={item.platform}
-                price={item.price}
-                rating={item.rating}
-                location={item.location}
-                aso={'ASO index'}
-                asoStats={item.asoindex}
-                installs={'Установок в месяц'}
-                installsStats={item.installations}
-                category={'В категории'}
-                categoryStats={item.categoryPosition}
-            />
-        });
-
         function filterCard() {
+            cardsArr = list[currentFilter].applications.map((item)=> {
+                return <Card
+                    key={item.key}
+                    appAvatar={item.icon}
+                    appName={item.name}
+                    appPlatform={item.platform}
+                    price={item.price}
+                    rating={item.rating}
+                    location={item.location}
+                    aso={'ASO index'}
+                    asoStats={item.asoindex}
+                    installs={'Установок в месяц'}
+                    installsStats={item.installations}
+                    category={'В категории'}
+                    categoryStats={item.categoryPosition}
+                />
+            });
+
 
             switch (filter[activeTab].platform) {
                 case ALL_PLATFORMS:
