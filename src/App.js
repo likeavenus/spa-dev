@@ -1,4 +1,4 @@
- import React, {Component} from 'react';
+import React, {Component} from 'react';
 import styles from "./App.scss";
 import Card from "./components/Card/Card";
 import Filter from "./components/Filter/Filter";
@@ -12,15 +12,18 @@ import {ANDROID_PLATFORM} from "./actions/actions";
 
      render() {
 
-        let currentFilter = this.props.store.filter.toLowerCase();
+        const {activeTab, list, filter} = this.props.store;
+
+        let currentFilter = activeTab.toLowerCase();
         let cardsArr;
         let id = 0;
-        for (let item of this.props.store.list[currentFilter].applications) {
+        for (let item of list[currentFilter].applications) {
             item.key = id;
             id += 1;
         }
 
-        cardsArr = this.props.store.list[currentFilter].applications.map((item)=> {
+
+         cardsArr = list[currentFilter].applications.map((item)=> {
             return <Card
                 key={item.key}
                 appAvatar={item.icon}
@@ -38,10 +41,57 @@ import {ANDROID_PLATFORM} from "./actions/actions";
             />
         });
 
-        return (
+        function filterCard() {
+
+            switch (filter[activeTab].platform) {
+                case ALL_PLATFORMS:
+                    return cardsArr;
+                case IOS_PLATFORM:
+                    return list[currentFilter].applications.filter(item => item.platform === "apple" || item.platform === "iphone").map(item => {
+                        return <Card
+                            key={item.key}
+                            appAvatar={item.icon}
+                            appName={item.name}
+                            appPlatform={item.platform}
+                            price={item.price}
+                            rating={item.rating}
+                            location={item.location}
+                            aso={'ASO index'}
+                            asoStats={item.asoindex}
+                            installs={'Установок в месяц'}
+                            installsStats={item.installations}
+                            category={'В категории'}
+                            categoryStats={item.categoryPosition}
+                        />
+                    });
+                case ANDROID_PLATFORM:
+                    return list[currentFilter].applications.filter(item => item.platform === "android").map(item => {
+                        return <Card
+                            key={item.key}
+                            appAvatar={item.icon}
+                            appName={item.name}
+                            appPlatform={item.platform}
+                            price={item.price}
+                            rating={item.rating}
+                            location={item.location}
+                            aso={'ASO index'}
+                            asoStats={item.asoindex}
+                            installs={'Установок в месяц'}
+                            installsStats={item.installations}
+                            category={'В категории'}
+                            categoryStats={item.categoryPosition}
+                        />
+                    });
+
+                default: return cardsArr;
+            }
+        }
+
+
+         return (
             <div className={styles.App}>
                 <Filter/>
-                {cardsArr}
+                {filterCard()}
             </div>
         );
     }

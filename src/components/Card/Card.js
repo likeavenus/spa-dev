@@ -20,6 +20,7 @@ export default class Card extends Component {
                         <div className={styles.app_info}>
                             <div className={styles.app_platform}>
                                 {this.props.appPlatform === 'apple' && <Apple styles={styles.platform_img_apple}/>}
+                                {this.props.appPlatform === 'iphone' && <Apple styles={styles.platform_img_apple}/>}
                                 {this.props.appPlatform === 'android' && <Android styles={styles.platform_img_apple}/>}
                                 <p className={styles.app_price}>{this.props.price}</p>
                             </div>
